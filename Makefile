@@ -10,7 +10,7 @@ $(TARGET): $(SRC)
 	$(CC) $(CFLAGS) -o $@ $^
 
 run: $(TARGET)
-	mpirun ./$(TARGET) $(MPIFLAGS)
+	mpirun $(MPIFLAGS) ./$(TARGET)
 
 clean:
 	rm -f $(TARGET)
